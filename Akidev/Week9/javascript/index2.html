@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year Checker</title>
+  </head>
+  <body>
+    <h2>Leap Year Checker</h2>
+    <input type="number" id="yearInput" placeholder="Enter a year" />
+    <button onclick="checkLeapYear()">Check</button>
+    <p id="result"></p>
+
+    <script>
+      function checkLeapYear() {
+        const year = document.getElementById("yearInput").value;
+        let result;
+
+        if (year % 4 === 0) {
+          if (year % 100 === 0) {
+            // If the year is divisible by 100, it must also be divisible by 400 to be a leap year
+            if (year % 400 === 0) {
+              result = `${year} is a leap year.`;
+            } else {
+              result = `${year} is not a leap year.`;
+            }
+          } else {
+            result = `${year} is a leap year.`;
+          }
+        } else {
+          result = `${year} is not a leap year.`;
+        }
+
+        document.getElementById("result").innerText = result;
+      }
+    </script>
+  </body>
+</html>

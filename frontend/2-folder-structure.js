@@ -11,9 +11,12 @@ client
         components
             Header.js
             Footer.js
+            Product.js
+        pages
             Home.js
             About.js
             Contact.js
+
         App.js
         index.js
     package.json
